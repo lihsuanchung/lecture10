@@ -1,0 +1,4 @@
+"0","data_filtered |>"
+"0","    select(age) |>"
+"0","    summary() |>"
+"0","    kable(caption = ""COVID-19 Age Summary"")"

@@ -1,0 +1,2 @@
+"0","data_cleaned <- dat |>"
+"0","    select(country, age, sex, city, province, latitude, longitude)"

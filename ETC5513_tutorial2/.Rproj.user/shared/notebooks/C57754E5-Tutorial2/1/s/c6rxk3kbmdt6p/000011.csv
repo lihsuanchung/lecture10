@@ -1,0 +1,5 @@
+"0","round( sum(is.na(data_cleaned$age))/length(data_cleaned$age), digits=5)"
+"1","[1]"
+"1"," 0.91112"
+"1","
+"

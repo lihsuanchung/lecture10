@@ -1,0 +1,1 @@
+"0","dat |> select(country, age, sex, city, province,longitude, latitude )"

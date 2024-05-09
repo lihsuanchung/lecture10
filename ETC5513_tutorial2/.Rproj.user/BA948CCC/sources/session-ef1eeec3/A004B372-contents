@@ -1,0 +1,22 @@
+---
+title: "ETC5513: Tutorial 2 solution"
+author: "Add here your name"
+output:
+  html:
+    toc: true
+    toc_float: true
+    theme: flatly
+---
+
+# Loading libraries
+
+```{r Chunk 1, message = FALSE}
+library(rmarkdown)
+library(knitr)
+library(tidyverse)
+library(readr)
+library(kableExtra)
+library(ggplot2)
+library(gridExtra)
+```
+

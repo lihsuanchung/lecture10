@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Echidna Group - LI-HSUAN CHUNG">
+<meta name="dcterms.date" content="2024-05-03">
+
+<title>The growth rate of the proportion of renewable energy in total energy usage.</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="group-report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="group-report_files/libs/quarto-html/quarto.js"></script>
+<script src="group-report_files/libs/quarto-html/popper.min.js"></script>
+<script src="group-report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="group-report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="group-report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="group-report_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="group-report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="group-report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="group-report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="group-report_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="group-report_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">1. Research Question</a></li>
+  <li><a href="#dataset-introduction" id="toc-dataset-introduction" class="nav-link" data-scroll-target="#dataset-introduction">2. Dataset Introduction</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#result" id="toc-result" class="nav-link" data-scroll-target="#result">Result</a>
+  <ul class="collapse">
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">1. Conclusion</a></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">2. Recommendations</a></li>
+  </ul></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="group-report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The growth rate of the proportion of renewable energy in total energy usage.</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Echidna Group - LI-HSUAN CHUNG </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 3, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>In today’s world, we’re facing climate change and environmental issues. That’s why it’s important to look at how much renewable energy each country uses. Understanding this helps us make better plans to protect the environment. By analyzing the increase in the use of renewable energy in different countries, we can learn what works best and encourage countries with lower usage rates to improve.</p>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This part of report analyzes the recent trends in renewable energy’s share of primary energy consumption across various countries. Utilizing a dataset measuring the percentage of primary energy sourced from renewables, including hydropower, solar, wind, geothermal, bioenergy, wave, and tidal, and excluding traditional biofuels. The distribution of renewable energy use in various countries will be presented in this report. The five countries with the highest and lowest increases in the use of renewable energy will be presented in this report and used for GDP analysis at the end.</p>
+<section id="research-question" class="level2">
+<h2 class="anchored" data-anchor-id="research-question">1. Research Question</h2>
+<p>Which five countries have made the greatest progress in the proportion of renewable energy, and roughly from which region do these countries come from?</p>
+</section>
+<section id="dataset-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-introduction">2. Dataset Introduction</h2>
+<p>The <a href="https://ourworldindata.org/grapher/renewable-share-energy?tab=chart#research-and-writing">dataset</a> includes information on the share of primary energy consumption from renewable sources. The ratio of renewable energy use in countries around the world from 1965 to 2022 is recorded. This report will use data from 1985-2021. The average data for each continent and the world will be shaved off during the data cleaning process because it will not be used in this analysis.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Variable table</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable_Names</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Entity</td>
+<td style="text-align: left;">The name of the country</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Code</td>
+<td style="text-align: left;">Country Name Abbreviation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Year</td>
+<td style="text-align: left;">The year of the data</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Renewables%</td>
+<td style="text-align: left;">The percentage of renewable energy to all energy used</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">difference</td>
+<td style="text-align: left;">The renewables% changes between 1985 and 2021.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="methodology" class="level1">
+<h1>Methodology</h1>
+<p>The methodology employed in this study aimed to analyze the growth of renewable energy usage rates in various countries between 1985 and 2021. The following steps were undertaken to accomplish this:</p>
+<ol type="1">
+<li><strong>Data Collection:</strong>
+<ul>
+<li>Data on renewable energy usage rates for multiple countries from 1965 to 2022 were collected from Energy Institute.</li>
+</ul></li>
+<li><strong>Data Processing and Analysis:</strong>
+<ul>
+<li>The data collected in this research report were selected from the period 1985 to 2021.</li>
+<li>Because this study focuses on countries, the data of each continent and region will be deleted during the data clean process.</li>
+<li>Using the <code>ggplot2</code> package in R, a line chart was generated to visualize the trends in renewable energy usage rates for the top five countries with the highest growth rates during the study period.</li>
+</ul></li>
+</ol>
+<ol start="3" type="1">
+<li><strong>Identification of Top Five Countries:</strong>
+<ul>
+<li>Through data analysis, the top five countries with the highest growth rates in renewable energy usage between 1985 and 2021 were identified.</li>
+<li>The following table presents the filtered data.</li>
+</ul></li>
+</ol>
+<div class="cell" data-table="table-topfive">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<caption>Data of Renewable Energy Usage Rates for Top Five Countries</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Entity</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">difference</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Code</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Year</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Renewables (% equivalent primary energy)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Croatia</td>
+<td style="text-align: right;">18.21315</td>
+<td style="text-align: left;">HRV</td>
+<td style="text-align: right;">1991</td>
+<td style="text-align: right;">19.53725</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Croatia</td>
+<td style="text-align: right;">18.21315</td>
+<td style="text-align: left;">HRV</td>
+<td style="text-align: right;">1992</td>
+<td style="text-align: right;">15.99459</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Croatia</td>
+<td style="text-align: right;">18.21315</td>
+<td style="text-align: left;">HRV</td>
+<td style="text-align: right;">1995</td>
+<td style="text-align: right;">19.16081</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Croatia</td>
+<td style="text-align: right;">18.21315</td>
+<td style="text-align: left;">HRV</td>
+<td style="text-align: right;">1996</td>
+<td style="text-align: right;">24.70118</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Croatia</td>
+<td style="text-align: right;">18.21315</td>
+<td style="text-align: left;">HRV</td>
+<td style="text-align: right;">1993</td>
+<td style="text-align: right;">16.08737</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+<ol start="4" type="1">
+<li><strong>Visualization:</strong>
+<ul>
+<li>The line chart, depicted in <a href="#fig-topfive">Figure&nbsp;1</a>, illustrates the trends in renewable energy usage rates for these top five countries over the period from 1985 to 2021.</li>
+</ul></li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-topfive" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="group-report_files/figure-html/fig-topfive-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Top 5 countries renewable energy used increasing dunring the period</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="result" class="level1">
+<h1>Result</h1>
+<p>In this report, we examined the evolution of renewable energy adoption across various entities from 1985 to 2021. The analysis primarily focused on identifying the top five entities with the highest increase in renewable energy consumption and world’s average over this period.</p>
+<p>From <a href="#fig-topfive">Figure&nbsp;1</a> above, we can observe that among the top five countries with the highest growth rates, Sweden has the highest utilization rate among all countries, having grown from approximately 30% to over 50%.</p>
+<p>Germany started with a renewable energy usage rate of less than 10%, but after years of effort, it surpassed the world average from year 2010 , becoming the fifth-ranked country in terms of growth rate.</p>
+<p>Denmark had almost zero renewable energy usage rate in 1985, but it grew by over 40% in just over 30 years.Finland and Croatia had a similar trend, with an increase of around 20% during this period.</p>
+<p>From the table below, you can get a clear understanding of how much these countries and the world average have grown.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>The growth rate during the period from 1985 to 2021.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Entity</th>
+<th style="text-align: right;">difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Denmark</td>
+<td style="text-align: right;">40.391086</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Finland</td>
+<td style="text-align: right;">22.919699</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sweden</td>
+<td style="text-align: right;">20.884522</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Croatia</td>
+<td style="text-align: right;">18.213148</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Germany</td>
+<td style="text-align: right;">17.727043</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">World</td>
+<td style="text-align: right;">6.140639</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">1. Conclusion</h2>
+<p>The top five countries in terms of growth in renewable energy usage rates are Denmark, Finland, Sweden, Croatia, and Germany. All of these countries are from Europe, indicating significant progress in renewable energy usage in Europe.</p>
+</section>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">2. Recommendations</h2>
+<p>The world average growth rate of renewable energy usage is only 6%. We can examine the five countries with the lowest growth rates from <a href="#fig-lastfive">Figure&nbsp;2</a> to identify reasons, enabling a substantial increase in the world average in the future.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-lastfive" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="group-report_files/figure-html/fig-lastfive-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Last 5 countries renewable energy used increasing dunring the period</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="reference" class="level1">
+<h1>Reference</h1>
+<p>1.Wickham H, François R, Henry L, Müller K, Vaughan D (2023). <em>dplyr: A Grammar of Data Manipulation</em>. R package version 1.1.4, <a href="https://CRAN.R-project.org/package=dplyr" class="uri">https://CRAN.R-project.org/package=dplyr</a>.</p>
+<p>2.Wickham H, Hester J, Bryan J (2024). <em>readr: Read Rectangular Text Data</em>. R package version 2.1.5, <a href="https://CRAN.R-project.org/package=readr" class="uri">https://CRAN.R-project.org/package=readr</a>.</p>
+<p>3.H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016.</p>
+<p>4.Wickham H, Vaughan D, Girlich M (2024). <em>tidyr: Tidy Messy Data</em>. R package version 1.3.1, <a href="https://CRAN.R-project.org/package=tidyr" class="uri">https://CRAN.R-project.org/package=tidyr</a>.</p>
+<p>5.Zhu H (2024). <em>kableExtra: Construct Complex Table with ‘kable’ and Pipe Syntax</em>. R package version 1.4.0, <a href="https://CRAN.R-project.org/package=kableExtra" class="uri">https://CRAN.R-project.org/package=kableExtra</a>.</p>
+<p>6.Share of primary energy consumption from renewable sources. (2023, June 26). Our World in Data. https://ourworldindata.org/grapher/renewable-share-energy?tab=chart#research-and-writing</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

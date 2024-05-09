@@ -1,0 +1,109 @@
+---
+title: "ETC5513: Tutorial 2 solution"
+author: "Li-Hsuan Chung"
+output:
+  html:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Loading libraries
+
+```{r Chunk 1, message = FALSE, warning= TRUE, echo= TRUE}
+library(rmarkdown)
+library(knitr)
+library(tidyverse)
+library(readr)
+library(kableExtra)
+library(ggplot2)
+library(gridExtra)
+```
+
+In this section we are loading all the required libraries for the tutorial
+
+# Introduction
+
+In this tutorial we are looking at the Coronavirus cases detected within the Hubei area as reported in the [Lancet](https://www.thelancet.com/coronavirus) Journal website as of March 12, 2019.
+
+# Reading Coronavirus Data
+
+```{r Reading data, echo = TRUE, warning= FALSE, message= FALSE}
+dat <- read_csv("Data/COVID19_March12_Hubei.csv")
+```
+```{r}
+
+```
+
+The dataset dat has `r ncol(dat)` columns and `r nrow(dat)` rows
+
+### Why is it important to know the dimension of your dataset?
+
+### What are the variable names in the dataset?” and display the names of the dataset variables using R.
+
+```{r}
+names(dat)
+```
+
+- **Var1**
+- Var2
+
+```{r}
+data_cleaned <- dat |>
+    select(country, age, sex, city, province, latitude, longitude)
+```
+```{r}
+data_cleaned <- data_cleaned |>
+    mutate(age = as.numeric(age))
+```
+
+```{r}
+glimpse(data_cleaned)
+```
+
+```{r}
+data_cleaned <- data_cleaned|> mutate(age=as.numeric(age))
+```
+```{r}
+head(data_cleaned$age, 20)
+```
+
+```{r}
+round( sum(is.na(data_cleaned$age))/length(data_cleaned$age), digits=5)
+```
+
+```{r}
+data_filtered <- data_cleaned |>
+  filter(!is.na(age),sex %in% c("male","female"))
+data_filtered
+```
+
+```{r}
+dim(data_filtered)
+```
+
+```{r}
+summary(data_filtered)
+```
+
+```{r}
+data_filtered <- data_filtered |> filter(age>=1)
+data_filtered
+```
+
+```{r}
+data_filtered |>
+    select(age) |>
+    summary() |>
+    kable(caption = "COVID-19 Age Summary")
+```
+
+
+
+```{r}
+data_filtered |>
+    ggplot(aes(x=age)) +
+    geom_histogram(binwidth = 5) +
+    labs(x="Age", y="")
+```
+
